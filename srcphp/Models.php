@@ -19,7 +19,7 @@ use PDO;
         
         public function __construct()
         {
-            $cc = new  Conexion("dtallones", "localhost", "root", "admin");
+            $cc = new  Conexion("detalles", "localhost", "root", "admin");
             self::$pdo = $cc->getPDO();
         }
         public function create(array $obj)

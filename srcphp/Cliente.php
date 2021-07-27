@@ -2,7 +2,8 @@
     
     namespace proyecto;
  
-
+    use PDO;
+    use function json_encode;
     /**
      * Class Persona
      */
@@ -12,10 +13,10 @@
         /**
          * @var array
          */
-        protected $filleable = ["Nombre", "Correo", "Telefono", "Contraseña"];
+        protected $filleable = ["Nombre", "Correo", "Telefono", "Passwordd"];
         protected $table = "Clientes";
         public $Nombre = "";
         public $Correo = "";
         public $Telefono = "";
-        public $Contraseña = "";
+        public $Passwordd = "";
     }

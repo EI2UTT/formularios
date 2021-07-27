@@ -10,7 +10,7 @@
          * Conexion constructor.
          */
         public static $DB = null;
-        public $dbname = "dtallones";
+        public $dbname = "Detalles";
         public $host = "localhost";
         public $user = "root";
         public $password = "admin";

@@ -43,11 +43,11 @@
 
     <section class="form-login">
         <i><h5>!Bienvenid@¡</h5></i>
-        <input class="controls" type="text" name="Nombre" value="" placeholder="Nombre completo">
-        <input class="controls" type="text" name="E-mail" value="" placeholder="Email">
-        <input class="controls" type="number" name="Telefono" id="" placeholder="Telefono">
-        <input class="controls" type="password" name="Contraseña" placeholder="Contraseña">
-        <input role="link" @click="enviarDatos" class="buttons" type="button" name="" value="Registrarse">
+        <input class="controls" type="text"  value="" placeholder="Nombre completo">
+        <input class="controls" type="text"  value="" placeholder="Email">
+        <input class="controls" type="tel"  placeholder="Telefono">
+        <input class="controls" type="password"  placeholder="Contraseña">
+        <input role="link" @click="enviarDatos" class="buttons" type="button" value="Registrarse">
         <p style="color: black;">Ya tienes una cuenta? <a href="inicio-sesion.html">     Inicia Sesion</a></p>
     </section>
 
@@ -133,16 +133,17 @@
             Nombre:"",
             Correo:"",
             Telefono:"",
-            Contraseña:""
+            Passwordd:""
           },
       },
       methods:{
           enviarDatos:function(){
               var hola =new URLSearchParams();
-              hola.append('Nombre',this.Clientes.Nombre);
-              hola.append('Correo',this.Clientes.Correo);
-              hola.append('Telefono',this.Clientes.Telefono);
-              hola.append('Contraseña', this.Clientes.Contraseña);
+              hola.append('Nombre', this.Clientes.Nombre);
+               hola.append('Correo', this.Clientes.Correo);
+                hola.append('Telefono', this.Clientes.Telefono);
+                 hola.append('Passwordd', this.Clientes.Passwordd);
+
               axios.post('controller/insertarcliente.php',hola).then(function(response)
               {console.log(response);})
               .catch(function(error){console.log(error);})
